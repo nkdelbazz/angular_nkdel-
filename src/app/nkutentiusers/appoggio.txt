@@ -1,0 +1,155 @@
+{{index}}
+
+
+<ng-container
+*ngIf="showInsert; then showInsertIN; else showInsertOOUT">
+</ng-container>
+
+<ng-template #showInsertIN>
+
+  
+<h1 style="color: blue;"> </h1>
+<div>
+  <span class="border border-success">utente :  {{index}} </span>
+  
+        <button (click)="update()" type="submit" class="btn btn-primary">Submit</button>
+
+      <form [formGroup] = "Formupdate" >
+
+        <div class="form-group">
+          <label for="uname">macrosezione:</label>
+          <input placeholder="{{macrosezione_old}}" type="text"
+           class="form-control" id="uname" formControlName="macrosezione_n"
+          name="uname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <input hidden type="text" name="id_old" formControlName="id_update" value="{{id_old}}">
+
+        <div class="form-group">
+          <label for="pwd">paragrafo:</label>
+          <input  type="text" class="form-control" id="pwd" formControlName="paragrafo_n"
+          placeholder="{{paragrafo_old}}" name="pswd" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+
+        <div class="form-group">
+       <!--
+          <label for="pwd">paragrafo:</label>
+          <input type="password" class="form-control" id="pwd" formControlName="paragrafo_n"
+          placeholder="Enter password" name="pswd" required>
+       -->
+          <label for="exampleFormControlTextarea3" >testo libero </label>
+          <textarea  class="form-control" formControlName="scrittura_n" 
+          id="exampleFormControlTextarea3" rows="20" cols="200" placeholder="{{testo_old}}" required ></textarea>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" required> consento la modifica 
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Check this checkbox to continue.</div>
+          </label>
+
+        </div>
+      </form>
+
+</div>
+</ng-template>
+
+<ng-template #showInsertOOUT>
+
+  <button routerLink="insert" style="background-color: red; color: black;" type="submit" class="btn btn-primary" (click)="insert()"> inserisci elemento </button>
+
+
+  <table class="table table-striped table-md table-dark">
+    <caption>{{title}}</caption>
+    <tr>
+        <th>id</th>
+        <th>macrosezione</th>
+        <th>paragrafo</th>
+        <th>testo</th>
+        <th>ELIMINA ELEMENTO</th>
+        <th>AGGIORNA ELEMENTO</th>
+    </tr>
+  <tr *ngFor ="let utente of utentiusers_appoggio">
+    <th>{{utente.id}}</th>
+    <th>{{utente.macrosezione}}</th>
+    <th>{{utente.paragrafo}}</th>
+    <th>{{utente.testo}}</th>
+    <th >  <button  style="background-color: red; color: black;" type="submit" class="btn btn-primary" (click)="delete(utente.id)">   elimina elemento </button> </th>
+    <th>  <button routerLink="update" style="background-color: gold; color: black;"type="submit" class="btn btn-primary" >aggiorna elemento</button> </th>
+  </tr>
+</table>
+
+</ng-template>
+
+<!-- (click)="preUpdate(utente.id)"> 
+<table class="table table-striped table-md table-dark">
+    <caption>{{title}}</caption>
+    <tr>
+        <th>id</th>
+        <th>macrosezione</th>
+        <th>paragrafo</th>
+        <th>testo</th>
+        <th>ELIMINA ELEMENTO</th>
+        <th>AGGIORNA ELEMENTO</th>
+    </tr>
+  <tr *ngFor ="let utente of utentiusers_appoggio">
+    <th>{{utente.id}}</th>
+    <th>{{utente.macrosezione}}</th>
+    <th>{{utente.paragrafo}}</th>
+    <th>{{utente.testo}}</th>
+    <th >  <button  style="background-color: red; color: black;" type="submit" class="btn btn-primary" (click)="delete(utente.id)">elimina elemento</button> </th>
+    <th>  <button  style="background-color: gold; color: black;"type="submit" class="btn btn-primary" (click)="update(utente.id)">aggiorna elemento</button> </th>
+  </tr>
+</table>
+-->
+
+
+
+
+
+
+
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">dsass</span>
+    </button>
+  </nav>
+</div>
+
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>

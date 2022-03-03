@@ -1,27 +1,178 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Fixed navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse"   (click)="isCollapsed= !isCollapsed" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"  open="true"  open="true">
-    <span class="navbar-toggler-icon"></span>
+<!-- 
+Custom nvbar color 
+-->
+<div class="container-fluid" id="mainavabar">
+  <nav class="navbar navbar-expand-sm navbar-custom" >
+  <a href="/" class="navbar-brand">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+      <i class="fa fa-bars fa-lg py-1 text-white"></i>
   </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isCollapsed">
-    <ul class="navbar-nav mr-auto"  >
-      <li class="nav-item active">
-        <a class="nav-link" href="#" routerLink="">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#" routerLink="users">USERS</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" routerLink="/users/new">  New User</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
 
-    <form class="form-inline mt-2 mt-md-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
+  <div class="navbar-collapse collapse" id="navbarCustom">
+      <ul class="navbar-nav" style="padding-right: 0.5em;" >
+          <li class="nav-item active">
+              <a class="nav-link" href="#">Active</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+          </li>
+
+           <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+          </li>
+
+         <!-- <a [routerLink]="['/cocktails-details', cocktail.id]" routerLinkActive="router-link-active" ]></a> --> 
+
+          <li class="nav-item" id="alldrop" >
+              <select (mouseover)='over("white")' (mouseout)='over("black")'#colorchange>
+                  <option selected> main view </option>
+                  <option >a</option>
+                  <option >b</option>
+                  <option>c</option>
+              </select>
+          </li>
+
+<!--
+
+          <body>
+
+            <h1>fab fa-xbox</h1>
+            
+            <i class='fab fa-xbox'></i>
+            <i class='fab fa-xbox' style='font-size:24px'></i>
+            <i class='fab fa-xbox' style='font-size:36px'></i>
+            <i class='fab fa-xbox' style='font-size:48px;color:red'></i>
+            <br>
+
+
+          -->
+
+<!--
+         <li>
+            <a [routerLink]="['list']" class="nav-link nav-text">Home</a>
+         </li>
+        -->
+
+
+          <li class="nav-item" id="alldrop" >   
+            <p>  VISUALIZZA LA PAGINA PRINCIPALE 
+                <span class="glyphicon glyphicon-plus-sign" style="color: rgb(22, 133, 100); 
+                cursor: pointer; " 
+                (click)="changeClick()"  routerLink="nkdmainif" >
+                </span>
+            </p>
+          </li>
+
+
+
+        <li style="padding-top: 0.9em; cursor: pointer; color: blueviolet;"> 
+           <div  (click)="changeClick()"  routerLink="list" class="fas fa-atom"></div>
+        </li>
+
+
+          <li style="padding-top: 0.9em; cursor: pointer; color: rgb(43, 226, 49);"> 
+            <div  (click)="changeClick()"  routerLink="testNicola" class="fas fa-atom"></div>
+          </li>
+          
+
+          <li style="padding-top: 0.9em; cursor: pointer; color: rgb(75, 21, 91);"> 
+            <div  (click)="changeClick()"  routerLink="testNicola/parent" class="fas fa-atom"></div>
+         </li>
+
+
+
+         <li style="padding-top: 0.9em; cursor: pointer; color: rgba(239, 233, 240, 0.904);"> 
+          <div  (click)="changeClick()"  routerLink="formValidator" class="fas fa-atom"></div>
+       </li>
+  
+
+       <li style="padding-top: 0.9em; cursor: pointer; color: rgba(134, 159, 22, 0.904);"> 
+        <div  (click)="changeClick()"  routerLink="corsexample" class="fas fa-atom"></div>
+     </li>
+
+
+     <li style="padding-top: 0.9em; cursor: pointer; color: rgba(34, 72, 138, 0.904);"> 
+      <div  (click)="changeClick()"  routerLink="boostrap-testing" >
+    
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
+          <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+        </svg>
+
+      </div>
+   </li>
+        
+      <!--  <i class="fas fa-atom"></i>  -->
+
+
+        <!--
+        <i class="fas fa-atom"></i>
+          <li class="nav-item" id="alldrop" >
+            <p>  VISUALIZZA LA LISTA
+                <span class="glyphicon glyphicon-plus-sign" style="color: rgb(22, 133, 100); 
+                cursor: pointer; " 
+                (click)="changeClick()"  routerLink="list" >
+                </span>
+            </p>
+          </li>
+        -->
+      </ul>
+    <!--
+      <ul> 
+        <div>   </div>
+        <div> <a [routerLink]="['list']" class="nav-link nav-text">hiu</a>  fine </div>
+      </ul>
+    -->
+
+    
   </div>
-</nav>
+
+
+
+  <div style="margin-right: 1cm; color: blue;"   *ngIf="CheckUsername"> USER : {{usernameValue}}</div>  
+  
+  <button appDirect1 type="button" class="btn" *ngIf="CheckUsername" (click)="logout()"><p>LOGOUT :
+     <span class="glyphicon glyphicon-envelope"></span></p></button>
+  
+  <a
+  id="pop_nic"
+  type="button"
+  class="btn"
+  style="background-color:purple" 
+  data-container="body"
+  data-toggle="popover"
+  data-placement="bottom"
+  title="Titolo del Popover"
+  data-content= "valore"
+  style="background: none !important; border: nones; "
+  
+>
+
+<div id="infoUser" *ngIf="CheckUsername" >
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  </svg>
+</div>
+</a>
+  <!--
+  <a  id="popnic" tabindex="0" class="btn btn-lg btn-danger" role="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="ciao
+  
+
+  ">Dismissible popover</a>
+
+  <div id="infoUser">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  </svg>
+</div>
+
+-->
+
+  </nav>
+</div>
+
+

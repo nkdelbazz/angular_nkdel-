@@ -1,0 +1,74 @@
+
+<body #imgH>
+
+
+<div  style="padding: 0.5cm; padding-left: 0.2cm;">
+    <ul class="list-group list-group-horizontal" style="list-style-type: none;" >
+        <li >
+            <div class="btn-group-vertical" >
+                <select class="form-select" aria-label="Default select example" [formControl] = "macrosezione"
+             style="margin: center;">
+                   <!-- <option selected>Open this select menu</option> -->
+                    <option  (click)="selectBackgroundimage('uno')"    (click)="abc()">  primo sfondo     </option>
+                    <option (click)="selectBackgroundimage('due')" >  secondo sfondo   </option>
+                    <option (click)="selectBackgroundimage('tre')" >  terzo0 sfondo    </option>
+                    <option selected (click)="selectBackgroundimage('main')"> main     </option> 
+                 </select>
+            </div>        
+       </li>
+
+      </ul>
+
+
+        <li>  
+          <div>  
+              <p>  aggounta di un capitolo 
+              <span class="glyphicon glyphicon-plus-sign" style="color: black; cursor: pointer;" 
+              (click)="changeClick()">
+              </span>
+            </p>
+          </div>
+       </li>
+
+
+
+       <li>
+       <div *ngIf="show"> 
+        <!-- form data -->
+            <form  #insertText [formGroup] = "formSezione" >
+              <div class="row">
+
+                <div class="col">
+                  <ul class="list-group list-group-horizontal" style="list-style-type: none;" >
+
+                      <input type="text" class="form-control" placeholder="macrosezione" style="width:5cm;" formControlName="macrosezione">
+                      <input type="text" class="form-control" placeholder="paragrafo" style="width:5cm; margin-left: 2cm;"    formControlName="paragrafo">
+                  </ul>    
+                  
+                  <div class="form-group">
+
+                      <label for="exampleFormControlTextarea3" >Rounded corners</label>
+                      <textarea class="form-control" formControlName="scrittura" id="exampleFormControlTextarea3" rows="10" cols="20" ></textarea>
+
+                  </div>
+                </div>
+              </div>
+             <!--routerLink="utentiusers"-->
+             <!--<button routerLink="nkdmainif/utentiusers" type="submit" class="btn btn-primary" (click)="valorizzaform()">Submit</button> -->
+              <button routerLink="utentiusers" type="submit" class="btn btn-primary" (click)="valorizzaform()">visualizza e inserisci</button>
+            </form>      
+            <button routerLink="utentiusers" type="submit" class="btn btn-primary" >visualizza</button>
+
+            
+        <!-- form data -->
+        </div>
+      </li>
+</div>
+
+
+</body>
+
+
+
+
+

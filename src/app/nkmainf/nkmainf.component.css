@@ -1,0 +1,95 @@
+
+
+/*****************************************************************/
+ /*SCELTA DEGLI SFONDI */
+/*****************************************************************/
+
+
+#search
+{
+    position: absolute;
+    right: 1cm;
+}
+
+
+
+body.main
+{
+margin-top: 0cm;
+background-image: url(assets/main.png);
+background-repeat: no-repeat;
+width: 800px;
+height: 800px;
+background-position: center;
+border-radius: 15px;
+border: solid 10px blueviolet;
+max-width: 100%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+/*
+background-size: cover;
+*/
+
+/*
+background-size: contain;
+background-repeat: no-repeat;
+min-height: xl;
+min-width: 1em;
+*/
+}
+
+
+body.uno
+{
+background-image: url(assets/uno.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+width: 800px;
+height: 800px;
+background-position: center;
+border-radius: 15px;
+border: solid 10px blueviolet;
+max-width: 100%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+body.due
+{
+background-image: url(assets/due.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+width: 800px;
+height: 800px;
+background-position: center;
+border-radius: 15px;
+border: solid 10px blueviolet;
+max-width: 100%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+body.tre
+{
+background-image: url(assets/tre.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+width: 800px;
+height: 800px;
+background-position: center;
+border-radius: 15px;
+border: solid 10px blueviolet;
+max-width: 100%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+/*****************************************************************/
+/*****************************************************************/
+

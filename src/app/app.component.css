@@ -1,0 +1,20 @@
+body,
+html {
+  height: 10%;
+  
+}
+
+.bg {
+  /* The image used */
+/*  background-image: url(/NODE-SERVER/SERVER-EXPRESS-MONGO/NKDEL-ANGULAR/src/assets/immagini/0.jpg);*/
+background-image: url("../assets/immagini/thumb-1920-1039991.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+ background-repeat: no-repeat;
+
+ background-size: contain;
+ background-size: 100%;
+}
+

@@ -1,0 +1,96 @@
+
+#infoUser svg
+{
+
+  margin-left: 1em;
+  transform: scale(1.5);
+  z-index: 1;
+
+}
+
+
+#infoUser:hover
+{
+
+  z-index: 1;
+  transform: scale(3.00);
+  cursor: pointer;
+  color: blueviolet;
+
+}
+
+
+
+#mainavabar
+{
+
+  /*background-image: linear-gradient(to top right, #745454 0%, #DF15AA 50%, #AACFEF 100%);*/
+  background-color: #DF15AA;;
+  background-size: cover;
+  border-radius: 2cm;
+  color: black;
+}
+
+#idalldrop
+{
+ /* background-image: linear-gradient(to top right, #745454 0%, #DF15AA 50%, #AACFEF 100%);*/
+ background-color: #DF15AA;;
+
+}
+
+
+li{
+   padding-left: 0.5em;
+   color: black;
+  }
+
+/*
+  #alldrop
+  {
+  margin-top: 1em;
+  background-image: linear-gradient(to top right, #745454 0%, #DF15AA 50%, #AACFEF 100%);
+  background-color: aqua;
+  }
+
+  */
+
+a{
+
+  color: black;
+}
+
+#alldrop
+{
+  
+  margin-top: 1em;
+  /*
+  border-radius:0;
+  background-color: transparent;
+  */
+}
+
+select {
+ /* background-image: linear-gradient(to top right, #745454 0%, #DF15AA 50%, #AACFEF 100%);*/
+  border-width: 0px;
+  border-style: none;
+  border-color:transparent;
+  color: black;
+  border-width:0px;
+  border:none;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background-color: #DF15AA;
+  /*background-color: #DF15AA;*/
+}
+option {
+  background-color: #DF15AA;
+  /*background-color: transparent;*/
+   border-width: 0px;
+   border-style: none;
+   border-color:transparent;
+   color: black;
+   border-width:0px;
+   border:none;
+  background-color: #DF15AA;
+ }

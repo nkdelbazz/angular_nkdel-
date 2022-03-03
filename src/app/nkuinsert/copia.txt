@@ -1,0 +1,26 @@
+<p>INSERT </p>
+
+    <!-- form data -->
+    <form  #insertText [formGroup] = "formSezione" >
+        <div class="row">
+  
+          <div class="col">
+            <ul class="list-group list-group-horizontal" style="list-style-type: none;" >
+  
+                <input type="text" class="form-control" placeholder="macrosezione" style="width:10cm" formControlName="macrosezione">
+                <input type="text" class="form-control" placeholder="paragrafo" style="width:10cm"    formControlName="paragrafo">
+            </ul>    
+            
+            <div class="form-group">
+  
+                <label for="exampleFormControlTextarea3" >Rounded corners</label>
+                <textarea class="form-control" formControlName="scrittura" id="exampleFormControlTextarea3" rows="20" cols="200" ></textarea>
+  
+            </div>
+          </div>
+        </div>
+       <!--routerLink="utentiusers"-->
+       <!--<button routerLink="nkdmainif/utentiusers" type="submit" class="btn btn-primary" (click)="valorizzaform()">Submit</button> -->
+        <button routerLink="utentiusers" type="submit" class="btn btn-primary" (click)="valorizzaform()">Submit</button>
+      </form>      
+  <!-- form data -->  {{valore}}

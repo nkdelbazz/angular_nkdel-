@@ -14,12 +14,20 @@ export class UsersComponent implements OnInit {
   @Output('updateUser') updateUser = new EventEmitter<User>();
 
   constructor(private userService: UserService) {
-
-
+    
   }
 
   ngOnInit() {
-    this.users = this.userService.getUsers();
+    //this.users = this.userService.getUsers(); // vecchia gestione solo angular 
+    /*
+    this.userService.getUsers().subscribe(
+
+      res => {
+        this.users = res.data;
+      }
+    )
+    */
+    //this.userService.getUsers().subscribe(res => this.users = res['data']);
   }
 
   onDeleteUser(user: User) {
@@ -28,7 +36,7 @@ export class UsersComponent implements OnInit {
   }
 
   onSelectUser(user: User) {
-    const userCopy = Object.assign({}, user);
+    const userCopy = Object.assign({}, user);   //  fa la copia carbone 
     this.updateUser.emit(userCopy);
   }
 }

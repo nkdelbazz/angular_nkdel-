@@ -1,0 +1,111 @@
+
+
+<!--
+<mat-card class="example-card" style="background-color: bisque;">
+  hi
+  <button mat-button>LIKE</button>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card>
+
+-->
+
+
+
+   <table class="table" style="color: white; padding-right: 2em;">
+    <thead>
+      <tr style="color: aquamarine; background-color: chocolate;">
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">description</th>
+        <th scope="col">roleId</th>   
+        <th scope="col"> seleziona valore :  </th>
+      </tr>  
+    </thead>
+    <tbody>
+      <tr *ngFor = "let value of users ">
+        <td>{{value.id}}</td>
+        <td>{{value.name}}</td>
+        <td>{{value.description}}</td>
+        <td>{{value.roleId}}</td>         <!--view to component -->
+        <td style="color: blueviolet;"><button mat-raised-button (click)="selectedID(value)"
+        [routerLink]="'/testNicola/details/' + value.id" 
+        >DETAILS     
+        </button>           
+        <button (click)="putProve()" appDirect1> prova aggiornamento</button>
+        <button (click)="pushProve()" appDirect1> prova inserimento</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+  <!-- [routerLink]="'/testNicola/details/' + value.id"-->
+ 
+
+
+<!--
+<div style="color: red;">
+
+  {{userByid.id}} <br>
+  {{userByid.name}}
+</div>
+-->
+
+
+  
+
+
+
+
+  <table class="table" style="color: white;">
+    <thead>
+      <tr style="color: aquamarine; background-color: beige; color: blue;">
+        <th scope="col">id</th>
+        <th scope="col">roleName</th>
+      </tr>  
+    </thead>
+    <tbody>
+      <tr *ngFor = "let value of roles ">
+        <td>{{value.id}}</td>
+        <td>{{value.roleName}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  
+
+
+
+
+
+  <!--
+  <app-test-nicola-child [name] = "value"></app-test-nicola-child> 
+
+
+  <app-test-nicola-child [name] = "value"></app-test-nicola-child> 
+  -->
+
+
+  
+  <!-- Copyright 2022 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at https://angular.io/license -->
+  
+  
+<!--
+      <table mat-table [dataSource]="users" class="mat-elevation-z8">
+    
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> id. </th>
+          <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+-->      

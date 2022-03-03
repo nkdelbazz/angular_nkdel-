@@ -1,0 +1,33 @@
+
+<div id="nkinsert">
+    <p>INSERT numero utenti presenti : {{id_number_users}} </p>  
+    <!-- form data -->
+    <!-- form data -->
+
+
+    <form  [formGroup] = "formSezioneinsert"  >
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        #input_m    formControlName="macrosezione">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+      #input_p   formControlName="paragrafo">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+      #input_t  formControlName="scrittura">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+
+<button type="submit" class="btn btn-primary" (click)="insert()">Submit</button>
+</form>
+</div>

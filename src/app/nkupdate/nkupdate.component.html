@@ -1,0 +1,31 @@
+
+<p>UPDATE all utente con id : {{utente_attuale.id}}</p>  
+    <!-- form data -->
+  <!-- form data -->
+
+
+  <form  [formGroup] = "formSezioneupdate"  >
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        #input_m  placeholder="{{utente_attuale.paragrafo}}"  formControlName="macrosezione">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+      #input_p placeholder="{{utente_attuale.paragrafo}}"  formControlName="paragrafo">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+      #input_t placeholder="{{utente_attuale.testo}}" formControlName="scrittura">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+   
+    <button type="submit" class="btn btn-primary" (click)="update(utente_attuale.id)">Submit</button>
+  </form>

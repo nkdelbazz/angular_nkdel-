@@ -1,4 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
-body{
-  padding-top: 70px;
+
+.direct1 {
+  background-color: rgb(194, 208, 68);
+  border: 5px solid rgb(221, 16, 16);
+  color: red;
+  z-index: 1;
+  transform: scale(1.10);
 }
+
+.direct1 p {
+  color: red;
+}
+
+
+body
+{
+ background-image: url(assets/immagini/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

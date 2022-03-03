@@ -1,0 +1,186 @@
+
+
+
+
+
+ 
+
+
+
+.row .col-6{
+
+  background-color: green;
+  }
+
+  /*
+  .row .col-3{
+
+      background-color: bisque;
+      }
+  */
+
+      ::ng-deep.mat-dialog-container {
+          padding: 0px !important;
+          background-color: burlywood;
+          color: blue;
+          border-color: black;
+          margin: solid blue 2px;
+      }
+
+
+      @media screen and (max-width: 995px), 
+      screen and (max-height: 700px) {
+          }
+
+
+      #centro{
+  margin-top: 1cm;
+  background-color: blueviolet;
+  padding-top: 0.5cm;
+  padding-bottom: 1cm;
+  height: 10cm;
+  border: solid white;
+  border-radius: 1cm;
+      }
+
+
+
+
+
+/*
+      .options-user-class  .flex-spacer
+      {
+          background-color: aquamarine;
+          border: solid white;
+          border-radius: 2cm;
+      
+      }
+
+      .options-user-class  ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333333;
+        }
+        
+        .options-user-class    li {
+          float: left;
+        }
+        
+
+        .options-user-class  .title-user{
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+
+
+
+        .options-user-class  li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 5px;
+          text-decoration: none;
+        }
+        
+        .options-user-class    li a:hover {
+          background-color: #111111;
+        }
+
+
+        .vertical-center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+
+     */
+
+
+
+
+     #centro{
+    text-align: center;
+    background-color: rgb(208, 141, 141);
+     }
+
+
+        ul > li {
+          width: 5cm;  
+          display: inline-block;
+          
+                }
+
+  .flex-spacer
+  {
+      color: brown;
+      background-color: black;
+      border-radius: solid 1cm;
+      
+  }
+
+
+
+  #main-text{
+
+      color: red;
+      background-color: black;
+  }
+
+
+ ul:hover a  { background-color: black; }
+
+  
+
+
+
+.sezione-opzioni
+{  
+pointer-events: none;
+}
+
+
+.sezione-opzioni a
+{
+pointer-events: none;
+
+}
+
+
+
+
+ul.parent {  
+  pointer-events: none;
+}
+
+li.child {
+  pointer-events: auto;
+}
+
+ul.parent:hover {
+  background: grey;
+  border-radius: 1cm;
+  transform: scale(1.2);
+} 
+
+
+
+
+#main-options{
+
+color: red;
+transform: scale(1.6);
+background-color: brown;
+border: solid;
+border-radius: 1cm ;
+margin-left: 2cm;
+ margin-right: 2cm;
+transform: scale(1.2);
+} 
+

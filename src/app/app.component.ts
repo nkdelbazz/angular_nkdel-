@@ -7,6 +7,8 @@ import {User} from './classes/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  /*
   title = 'UMS';
   showForm = false;
   userSelected = new User();
@@ -20,4 +22,6 @@ export class AppComponent {
     this.showForm = true;
 
   }
+
+  */
 }

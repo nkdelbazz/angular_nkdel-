@@ -1,0 +1,37 @@
+<div style="margin-left: 5em; margin-right: 5em; margin-top:2em ;background-color: brown;  border: 5px solid grey; border-radius: 15px;" >
+  <div style="background-color: brown;">
+
+
+    <button routerLink="dropdownUsers" style="background-color: rgb(77, 18, 88); color: rgb(156, 156, 156); margin-left: 0%; padding: 0.3cm;" 
+    type="submit" class="btn btn-primary" (click)="insert()">   
+    ALL UTENTI <span class="badge badge-light">{{numero_utenti}}</span>
+    <span class="sr-only">unread messages</span>    
+    </button>
+
+    <button routerLink="insert" style="background-color: rgb(77, 18, 88); color: rgb(164, 168, 168);  padding: 0.3cm; margin-left: 1cm;"
+    type="submit" class="btn btn-primary" (click)="insert()"> 
+      INSERISCI NUOVO UTENTE 
+  </button>
+  </div>
+  <table class="table table-striped table-md table-dark">
+    <caption>{{title}}</caption>
+    <tr>
+        <th>id</th>
+        <th>macrosezione</th>
+        <th>paragrafo</th>
+        <th>testo</th>
+        <th>ELIMINA ELEMENTO</th>
+        <th>AGGIORNA ELEMENTO</th>
+        <th>AGGIORN DETTAGLI</th>
+    </tr>
+  <tr *ngFor ="let utente of utentiusers_appoggio">
+    <th>{{utente.id}}</th>
+    <th>{{utente.macrosezione}}</th>
+    <th>{{utente.paragrafo}}</th>
+    <th>{{utente.testo}}</th>
+    <th>  <button  style="background-color: red; color: black;" type="submit" class="btn btn-primary" (click)="delete(utente.id)">   elimina elemento </button> </th>
+    <th>  <button  style="background-color: gold; color: black;"type="submit" class="btn btn-primary" (click)="preUpdate(utente.id)" >aggiorna elemento</button> </th>
+    <th>  <button  style="background-color: gold; color: black;"type="submit" class="btn btn-primary" (click)="aggiornaDettagli()" >aggiorna elemento</button> </th>
+  </tr>
+  </table>
+</div>

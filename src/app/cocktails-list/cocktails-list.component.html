@@ -1,0 +1,264 @@
+
+
+
+<div [hidden] = "allCocktails.drinks || errMessCocktail">
+</div>
+
+<ng-container
+*ngIf="errMessCocktail; then error; else allok">
+</ng-container>
+<ng-template #error>
+<div>
+  <div style="color: red;">
+    {{errMessCocktail}}  
+  </div>
+</div>
+</ng-template>
+<ng-template #allok>
+<div>
+  TABELLA CARICATA 
+  <table class="table" style="color: white;">
+    <thead>
+      <tr style="color: aquamarine; background-color: chocolate;">
+        <th scope="col">id</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col"></th>     
+      </tr>  
+    </thead>
+    <tbody>
+      <tr *ngFor = "let value of allCocktails.drinks ">
+        <td>{{value.idDrink}}</td>
+        <td>{{value.strIngredient1}}</td>
+        <td>{{value.strIngredient2}}</td>
+        <td>{{value.strIngredient3}}</td>
+        <td>{{value.strIngredient4}}</td>
+      </tr>
+  
+    </tbody>
+  </table>
+</div>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+<div style="color: blueviolet;">
+  <br>
+
+
+  <div>
+    <td>{{prosingle.userid}}</td> <br>
+    <td>{{prosingle.id}}</td>  <br>
+    <td>{{prosingle.title}}</td> <br>
+    <td>{{prosingle.TT}}</td> <br>
+  </div>
+  
+  
+  <div>
+    <td>{{prosingle1.userid}}</td>  <br>
+    <td>{{prosingle1.id}}</td>   <br>
+    <td>{{prosingle1.title}}</td> <br>
+    <td>{{prosingle1.TT}}</td>   <br>
+  </div>
+
+<br><br>
+</div>
+
+
+
+  <table class="table" style="color: white;">
+    <thead>
+      <tr style="color: aquamarine; background-color: chocolate;">
+        <th scope="col">id</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let value of proOBJ ">
+        <td>{{value.userid}}</td>
+        <td>{{value.id}}</td>
+        <td>{{value.title}}</td>
+        <td>{{value.TT}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+<p>You have received a file called "cat-picture.jpeg".</p>
+
+<button mat-raised-button (click)="openBottomSheet()">Open file</button>
+
+
+<pre>
+  Goal: Get role name 
+  by async pipe
+  </pre>
+  
+      <!--user list-->
+      <ng-container *ngIf="users$ | async as users; else pendingList">
+        <li
+          class="list-group-item"
+          *ngFor="let user of users; let i = index"
+        >                                                                      
+          {{user.name}}
+  
+          <!--get user role with async pipe-->
+          <span *ngIf="user.roleId | roleName: i | async as role; else pendingRole">
+            (<em>{{role}}</em>)
+          </span>
+  
+          <!-- role spinner-->
+          <ng-template #pendingRole>
+            <i class="fa fa-spinner fa-spin fa-fw"></i>
+          </ng-template>
+  
+        </li>
+      </ng-container>
+  
+      <!--user list pending-->
+      <ng-template #pendingList>
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+      </ng-template>
+
+
+
+
+
+<br><br><br>
+ <div>    {{this.value}}    </div>
+ <div style="color: black;"> {{this.val[0].idDrink}}</div>
+
+
+
+ <div  (click)="getID('11007')" class="fas fa-atom" style="color: black;"></div>
+
+  <table class="table" style="color: white;">
+    <thead>
+      <tr style="color: aquamarine; background-color: chocolate;">
+        <th scope="col">id</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col"></th>     
+      </tr>  
+    </thead>
+    <tbody>
+      <tr *ngFor = "let value of allCocktails.drinks ">
+        <td>{{value.idDrink}}</td>
+        <td>{{value.strIngredient1}}</td>
+        <td>{{value.strIngredient2}}</td>
+        <td>{{value.strIngredient3}}</td>
+        <td>{{value.strIngredient4}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+  
+  <table class="table" style="color: white;">
+    <thead>
+      <tr style="color: aquamarine; background-color: chocolate;">
+        <th scope="col">id</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let value of allcockt.drinks ">
+        <td>{{value.idDrink}}</td>
+        <td>{{value.strIngredient1}}</td>
+        <td>{{value.strIngredient2}}</td>
+        <td>{{value.strIngredient3}}</td>
+        <td>{{value.strIngredient4}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+                                  
+          
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">{{single[0].id}}</th>
+      <th scope="col">{{single[0].userId}}</th>
+      <th scope="col">{{single[0].title}}</th>
+    </tr>
+  </thead>
+</table>
+
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
+<button type="button" class="btn btn-primary active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+<button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+
+
+
+<!--User List-->
+<li 
+  class="list-group-item list-group-item-action"
+  *ngFor="let member of members" 
+  [routerLink]="'/users/' + member.id"
+>
+  {{member.name}} - {{member.roleName}}
+</li>
+
+<!--Footer message-->
+<div class="mt-3" *ngIf="members; else spinner">
+  Click user to see details
+</div>
+
+<!--spinner-->
+<ng-template #spinner>
+  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+</ng-template>
+
+
+<!--
+
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+    <button mat-icon-button disabled></button>
+    {{node.name}}
+  </mat-tree-node>
+  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+    <button mat-icon-button matTreeNodeToggle
+            [attr.aria-label]="'Toggle ' + node.name">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    {{node.name}}
+  </mat-tree-node>
+</mat-tree>
+
+-->
+
+

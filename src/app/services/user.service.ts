@@ -1,10 +1,21 @@
 import {Injectable} from '@angular/core';
 import {UserInterface} from '../interfaces/user';
+import { HttpClientModule } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
+import { User } from './../classes/User';  // definizione di tipo user 
+import { forkJoin } from 'rxjs';
+import { get } from 'get-value';
+interface UserResponse
+{
+  data:User[];
+  message: string
+}
 
 @Injectable()
 
 export class UserService {
   users: UserInterface[] = [
+    /*
     {
       id: 1,
       name: 'Hidran1',
@@ -46,13 +57,22 @@ export class UserService {
       phone: '454545455',
       age: 43
     }
+    */
   ];
 
-  constructor() {
+
+  private APIURL = 'http://localhost:8000/users' ; // serve per dare il collegamento con il host di laravel 
+
+  constructor(private http: HttpClient) {
   }
 
   getUsers() {
-    return this.users;
+    // return this.users;                serve solo all interno di ANGULAR 
+    //return this.http.get<UserResponse>(this.APIURL); // serve per il collegamento con questo host e quello di laravel 
+    return this.http.get(this.APIURL).subscribe(
+      data => console.log(data),
+      error => alert(error.message)
+    );
   }
 
   getUser(id: number) {
@@ -81,5 +101,9 @@ export class UserService {
     this.users.splice(0, 0, user);
 
   }
+
+
+
+
 }
 

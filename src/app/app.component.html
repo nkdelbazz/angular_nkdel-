@@ -1,13 +1,22 @@
-<app-nav (onNewUser)="newUser()"></app-nav>
-<div class="container">
+<div class="bg">
+<!-- cambio di immagini -->
+    <app-nav>  <router-outlet></router-outlet> </app-nav>
+    <div class="row">
+      <div class="col-md-12">
 
-  <h1>User Management system</h1>
+    <router-outlet></router-outlet>
+    </div>
 
-
-  <div class="row">
-    <div class="col-md-12">
-  <router-outlet></router-outlet>
-
-  </div>
-</div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+      </div>
 </div>

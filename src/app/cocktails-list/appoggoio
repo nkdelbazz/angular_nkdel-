@@ -1,0 +1,64 @@
+
+<pre>
+  Goal: Get role name 
+  by async pipe
+  </pre>
+  
+      <!--user list-->
+      <ng-container *ngIf="users$ | async as users; else pendingList">
+        <li
+          class="list-group-item"
+          *ngFor="let user of users; let i = index"
+        >                                                                      
+          {{user.name}}
+  
+          <!--get user role with async pipe-->
+          <span *ngIf="user.roleId | roleName: i | async as role; else pendingRole">
+            (<em>{{role}}</em>)
+          </span>
+  
+          <!-- role spinner-->
+          <ng-template #pendingRole>
+            <i class="fa fa-spinner fa-spin fa-fw"></i>
+          </ng-template>
+  
+        </li>
+      </ng-container>
+  
+      <!--user list pending-->
+      <ng-template #pendingList>
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+      </ng-template>
+  
+
+
+
+
+
+
+
+
+
+
+
+      
+
+<h1>User List</h1>
+<pre>Goal: Multiple XHR with mapping</pre>
+
+<li 
+  class="list-group-item list-group-item-action"
+  *ngFor="let member of members" 
+  [routerLink]="'/users/' + member.id"
+>
+  {{member.name}} - {{member.roleName}}
+</li>
+
+<div class="mt-3" *ngIf="members; else spinner">
+  Click user to see details
+</div>
+
+
+<ng-template #spinner>
+  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+</ng-template>

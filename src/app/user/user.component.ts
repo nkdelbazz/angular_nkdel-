@@ -4,14 +4,14 @@ import {User} from '../classes/user';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'tr[app-user]',
+  selector: 'tr[app-user]',  // ha un selettore che non è il figlio 
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
 
 })
 export class UserComponent implements OnInit {
 
-  @Input('user-data') user: User;
+  @Input('user-data') user: User;  // filgio c
   @Output('onDeleteUser') userDeleted = new EventEmitter();
   @Output('onSelectUser') onSelectUser = new EventEmitter();
 
